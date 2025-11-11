@@ -8,14 +8,96 @@
   }
 
 body {
-    background-color: #9a9a9a;
-    color: white;
-    font-family: sans-serif;
+    background-image: url('imagens/fundo2 (3).png');
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     margin: 0;
+}
+
+
+.cx1 {
+  width: 100%;
+  max-width: 1200px; /* Alinhe com a largura máxima dos cards */
+  display: flex;
+  flex-direction: row; 
+  align-items: center; /* ALINHA TODOS OS ITENS VERTICALMENTE (MENU E TÍTULO) */
+    /* Garante que o H1 esteja no centro absoluto do container */
+  justify-content: center; 
+  margin-bottom: 20px;
+  position: relative; /* CRÍTICO: Define a base para o posicionamento absoluto do menu */
+  margin-top: -10px;
+  }
+
+/* Dropdown Button */
+.dropbtn {
+  background-color:transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.menu{
+  width: 50px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  position: absolute; /* Permite posicionar o menu em relação ao container .cx1 */
+  left: 0; /* Alinha o menu à esquerda do container .cx1 */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background: linear-gradient(to bottom, #f0f0f0, #d9d9d9); 
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background: linear-gradient(to bottom, #f0f0f0, #d9d9d9); 
+  border-radius: 50%;
+}
+
+h1 {
+/* Centralização horizontal agora é garantida pelo Flexbox do .cx1 (justify-content: center) */
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  margin: 0; /* Limpa margens */
+  color: #333;
+
 }
 
 .title{

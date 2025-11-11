@@ -1,6 +1,19 @@
 var canvas = document.getElementById("gameCanvas");
 var ctx = canvas.getContext("2d");
 
+function score(url, x, y) {
+  var img = new Image();
+  img.src = url;
+  img.onload = function () {
+    ctx.drawImage(img, x, y, 100, 80);
+  };
+  return img;
+}
+
+// Chamando a função para cada imagem com sua posição
+var score = score('imagens/score.png', 755, -5);
+
+
 function imagem(url, x, y) {
   var img = new Image();
   img.src = url;
@@ -23,13 +36,25 @@ function imagem2(url, x, y) {
   var img2 = new Image();
   img2.src = url;
   img2.onload = function () {
-    ctx.drawImage(img2, x, y, 590, 500);
+    ctx.drawImage(img2, x, y, 620, 530);
   };
   return img2;
 }
 
 // Chamando a função para cada imagem com sua posição
-var esteira = imagem2('imagens/esteira1.png', 190, 212);
+var esteira = imagem2('imagens/esteira1.png', 240, 152);
+
+function imagem3(url, x, y) {
+  var img3 = new Image();
+  img3.src = url;
+  img3.onload = function () {
+    ctx.drawImage(img3, x, y, 400, 310);
+  };
+  return img3;
+}
+
+// Chamando a função para cada imagem com sua posição
+var esteira = imagem3('imagens/caixa_esteira.png', 115, 402);
 
 
 
