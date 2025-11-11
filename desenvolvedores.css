@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Inter:wght@400;500;600&display=swap');
+
+
+
+.jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+/* 1. ESTILOS GERAIS DA PÁGINA */
+body {
+    /* Fundo cinza claro que aparece fora dos cards */
+    background-color: #e6e6e6; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    
+    /* Centraliza o TÍTULO e o container dos CARDS */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.cx1 {
+  width: 100%;
+  max-width: 1200px; /* Alinhe com a largura máxima dos cards */
+  display: flex;
+  flex-direction: row; 
+  align-items: center; /* ALINHA TODOS OS ITENS VERTICALMENTE (MENU E TÍTULO) */
+    /* Garante que o H1 esteja no centro absoluto do container */
+  justify-content: center; 
+  margin-bottom: 20px;
+  position: relative; /* CRÍTICO: Define a base para o posicionamento absoluto do menu */
+  margin-top: 30px;
+  }
+
+/* Dropdown Button */
+.dropbtn {
+  background-color:transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.menu{
+  width: 60px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  position: absolute; /* Permite posicionar o menu em relação ao container .cx1 */
+  left: 0; /* Alinha o menu à esquerda do container .cx1 */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background: linear-gradient(to bottom, #f0f0f0, #d9d9d9); 
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background: linear-gradient(to bottom, #f0f0f0, #d9d9d9); 
+  border-radius: 50%;
+}
+
+h1 {
+/* Centralização horizontal agora é garantida pelo Flexbox do .cx1 (justify-content: center) */
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  margin: 0; /* Limpa margens */
+  color: #333;
+
+}
+
+/* 2. ALINHAMENTO DOS CARDS (Usando o novo container .des) */
+.des {
+    /* Flexbox para colocar os três cards lado a lado */
+    display: flex;
+    justify-content: center; /* Centraliza o grupo de cards na tela */
+    gap: 30px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* Garante que quebrem a linha em telas pequenas */
+    max-width: 1200px; /* Limita a largura do container */
+    margin-top: 20px;
+}
+
+.desenvolvedor1:hover {
+      /* Estilos para quando o mouse estiver sobre o card */
+  transform: scale(1.05); /* Aumenta o card em 10% */
+  transition: 0.3s;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+}
+
+.desenvolvedor2:hover {
+      /* Estilos para quando o mouse estiver sobre o card */
+  transform: scale(1.05); /* Aumenta o card em 10% */
+  transition: 0.3s;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+}
+
+.desenvolvedor3:hover {
+      /* Estilos para quando o mouse estiver sobre o card */
+  transform: scale(1.05); /* Aumenta o card em 10% */
+  transition: 0.3s;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+}
+
+/* 3. ESTILO DE CADA CARD INDIVIDUAL */
+.desenvolvedor1, .desenvolvedor2, .desenvolvedor3 {
+    /* Configura o card como um container flexível vertical */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Centraliza a imagem e o texto dentro do card */
+    text-align: center;
+    
+    /* Forma e cor do card, imitando a referência */
+    width: 350px; 
+    height: 400px; 
+    margin: 15px 0; /* Margem apenas em cima/baixo, o gap trata a lateral */
+    padding: 10px;
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+    /* Degradê de fundo sutil, similar ao da imagem */
+    background: linear-gradient(to bottom, #f0f0f0, #d9d9d9); 
+
+    transition: 0.3s;
+}
+
+/* 4. IMAGEM E CÍRCULO */
+/* Container da imagem (o círculo) */
+.ds1, .ds2, .ds3 {
+    width: 160px; 
+    height: 160px; 
+    border-radius: 50%; /* Transforma em círculo */
+    overflow: hidden; /* Esconde partes da imagem que saem do círculo */
+    margin: 20px 0;
+}
+
+/* Garante que a imagem preencha o círculo sem distorção */
+.imgs {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%;
+}
+
+/* 5. ESTILOS DE TEXTO */
+h2 {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #333;
+    font-size: 1.8em;
+    margin: 10px 0 5px 0;
+}
+
+.subtitle{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.54em;
+  -webkit-text-stroke-width: 1.2px; /* Para compatibilidade com navegadores WebKit (Chrome, Safari, etc.) */
+  -webkit-text-stroke-color: black; /* Define a cor da borda */
+  color: #d1d1d1; /* Define a cor do preenchimento do texto */
+  margin-top: -10px;
+}
+
+
+p {
+    color: #666;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    margin: 2px 0;
+    margin-top: 10px;
+}
